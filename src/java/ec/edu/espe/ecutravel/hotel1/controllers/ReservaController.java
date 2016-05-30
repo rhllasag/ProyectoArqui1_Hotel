@@ -7,7 +7,6 @@ package ec.edu.espe.ecutravel.hotel1.controllers;
 
 import ec.edu.espe.ecutravel.hotel1.dao.ReservaFacade;
 import ec.edu.espe.ecutravel.hotel1.entities.Reserva;
-import ec.edu.espe.ecutravel.hotel1.exceptions.ValidacionException;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.ejb.EJB;

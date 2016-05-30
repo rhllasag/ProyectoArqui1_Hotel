@@ -11,9 +11,6 @@ import ec.edu.espe.ecutravel.hotel1.controllers.ReservaHabitacionController;
 import ec.edu.espe.ecutravel.hotel1.entities.Habitacion;
 import ec.edu.espe.ecutravel.hotel1.entities.Reserva;
 import ec.edu.espe.ecutravel.hotel1.entities.ReservarHabitacion;
-import java.math.BigDecimal;
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
@@ -86,11 +83,6 @@ public class Hotel1WS {
         }
 
         return totalHabitaciones;
-    }
-
-    @WebMethod(operationName = "prueba")
-    public void prueba() {
-        System.out.println("Hola");
     }
 
 }

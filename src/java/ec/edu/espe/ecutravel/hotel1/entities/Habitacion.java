@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Habitacion.findAll", query = "SELECT h FROM Habitacion h"),
 /*    @NamedQuery(name = "Habitacion.findPrecioDesayuno", query = "SELECT h FROM Habitacion h WHERE h.precioDesayuno = :precioDesayuno"),
     @NamedQuery(name = "Habitacion.findPrecioCatalogo", query = "SELECT h FROM Habitacion h WHERE h.precioCatalogo = :precioCatalogo"),*/
-    @NamedQuery(name = "Habitacion.findReservadasEnFechas", query = "SELECT h FROM Habitacion h, ReservarHabitacion r WHERE h.habCodigo = r.habCodigo.habCodigo AND r.fechaInicio BETWEEN :fechaInicio AND :fechaFin OR r.fechaFin BETWEEN :fechaInicio AND :fechaFin"),
+    @NamedQuery(name = "Habitacion.findReservadasEnFechas", query = "SELECT h FROM Habitacion h, ReservarHabitacion r WHERE h.habCodigo = r.habCodigo.habCodigo AND ( r.fechaInicio BETWEEN :fechaInicio AND :fechaFin OR r.fechaFin BETWEEN :fechaInicio AND :fechaFin)"),
     @NamedQuery(name = "Habitacion.findByHabCodigo", query = "SELECT h FROM Habitacion h WHERE h.habCodigo = :habCodigo"),
     @NamedQuery(name = "Habitacion.findByNumero", query = "SELECT h FROM Habitacion h WHERE h.numero = :numero"),
     @NamedQuery(name = "Habitacion.findByPrecioCatalogo", query = "SELECT h FROM Habitacion h WHERE h.precioCatalogo = :precioCatalogo"),

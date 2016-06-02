@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.entities;
+package ec.edu.espe.ecutravel.hotel.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

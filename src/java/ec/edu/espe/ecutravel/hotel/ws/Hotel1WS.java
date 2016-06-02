@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.ws;
+package ec.edu.espe.ecutravel.hotel.ws;
 
-import ec.edu.espe.ecutravel.hotel1.controllers.HabitacionController;
-import ec.edu.espe.ecutravel.hotel1.controllers.ReservaController;
-import ec.edu.espe.ecutravel.hotel1.controllers.ReservaHabitacionController;
-import ec.edu.espe.ecutravel.hotel1.entities.Habitacion;
-import ec.edu.espe.ecutravel.hotel1.entities.Reserva;
-import ec.edu.espe.ecutravel.hotel1.entities.ReservarHabitacion;
+import ec.edu.espe.ecutravel.hotel.controllers.HabitacionController;
+import ec.edu.espe.ecutravel.hotel.controllers.ReservaController;
+import ec.edu.espe.ecutravel.hotel.controllers.ReservaHabitacionController;
+import ec.edu.espe.ecutravel.hotel.entities.Habitacion;
+import ec.edu.espe.ecutravel.hotel.entities.Reserva;
+import ec.edu.espe.ecutravel.hotel.entities.ReservarHabitacion;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
@@ -38,7 +39,8 @@ public class Hotel1WS {
             @WebParam(name = "paquete") Integer paquete,
             @WebParam(name = "inicio") String inicio,
             @WebParam(name = "fin") String fin,
-            @WebParam(name = "habitaciones") List<Integer> habitaciones
+            @WebParam(name = "habitaciones") List<Integer> habitaciones,
+            @WebParam(name = "desayuno") boolean desayuno
     ) {
 
         if (new Date(inicio).before(new Date(fin))) {
@@ -55,8 +57,12 @@ public class Hotel1WS {
                 reservarhabitacion.setFechaFin(new Date(fin));
                 reservarhabitacion.setFechaInicio(new Date(inicio));
                 reservarhabitacion.setPrecioReserva(hab.getPrecioCatalogo());
-                reservarhabitacion.setDesayuno(hab.getPrecioDesayuno());
-
+                if (desayuno) {
+                    reservarhabitacion.setDesayuno(BigDecimal.ONE);
+                }
+                else{
+                reservarhabitacion.setDesayuno(BigDecimal.ZERO);
+                }
                 reservarhabitacion.setHabCodigo(hab);
                 System.out.println("habitacion" + ejbHab.getByCodigo(habitacione).toString());
                 reservarhabitacion.setResCodigo(reserva);

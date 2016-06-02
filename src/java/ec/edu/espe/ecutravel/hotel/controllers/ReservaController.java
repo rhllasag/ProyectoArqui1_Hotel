@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.controllers;
+package ec.edu.espe.ecutravel.hotel.controllers;
 
-import ec.edu.espe.ecutravel.hotel1.dao.ReservaFacade;
-import ec.edu.espe.ecutravel.hotel1.entities.Reserva;
+import ec.edu.espe.ecutravel.hotel.dao.ReservaFacade;
+import ec.edu.espe.ecutravel.hotel.entities.Reserva;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.ejb.EJB;

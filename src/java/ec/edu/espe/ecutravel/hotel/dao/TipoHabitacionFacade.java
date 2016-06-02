@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.dao;
+package ec.edu.espe.ecutravel.hotel.dao;
 
-import ec.edu.espe.ecutravel.hotel1.entities.TipoHabitacion;
+import ec.edu.espe.ecutravel.hotel.entities.TipoHabitacion;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.dao;
+package ec.edu.espe.ecutravel.hotel.dao;
 
-import ec.edu.espe.ecutravel.hotel1.entities.ReservarHabitacion;
+import ec.edu.espe.ecutravel.hotel.entities.Reserva;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author homer
  */
 @Stateless
-public class ReservarHabitacionFacade extends AbstractFacade<ReservarHabitacion> {
+public class ReservaFacade extends AbstractFacade<Reserva> {
 
     @PersistenceContext(unitName = "Hotel1WSPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class ReservarHabitacionFacade extends AbstractFacade<ReservarHabitacion>
         return em;
     }
 
-    public ReservarHabitacionFacade() {
-        super(ReservarHabitacion.class);
+    public ReservaFacade() {
+        super(Reserva.class);
     }
     
 }

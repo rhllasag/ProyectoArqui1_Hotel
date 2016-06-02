@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ecutravel.hotel1.controllers;
+package ec.edu.espe.ecutravel.hotel.controllers;
 
-import ec.edu.espe.ecutravel.hotel1.dao.HabitacionFacade;
-import ec.edu.espe.ecutravel.hotel1.dao.ReservaFacade;
-import ec.edu.espe.ecutravel.hotel1.dao.ReservarHabitacionFacade;
-import ec.edu.espe.ecutravel.hotel1.entities.Habitacion;
-import ec.edu.espe.ecutravel.hotel1.entities.Reserva;
-import ec.edu.espe.ecutravel.hotel1.entities.ReservarHabitacion;
+import ec.edu.espe.ecutravel.hotel.dao.HabitacionFacade;
+import ec.edu.espe.ecutravel.hotel.dao.ReservaFacade;
+import ec.edu.espe.ecutravel.hotel.dao.ReservarHabitacionFacade;
+import ec.edu.espe.ecutravel.hotel.entities.Habitacion;
+import ec.edu.espe.ecutravel.hotel.entities.Reserva;
+import ec.edu.espe.ecutravel.hotel.entities.ReservarHabitacion;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
